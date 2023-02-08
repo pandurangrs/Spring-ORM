@@ -6,13 +6,13 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Entity;
 
-@Entity
-@Table(name = "")
+@javax.persistence.Entity
+@Table(name = "student_details")
 public class Student {
 
 	@Id()
 	@Column(name = "student_id")
-	private int studentInt;
+	private int studentId;
 
 	@Column(name = "student_name")
 	private String studentName;
@@ -20,12 +20,12 @@ public class Student {
 	@Column(name = "student_city")
 	private String studentCity;
 
-	public int getStudentInt() {
-		return studentInt;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setStudentInt(int studentInt) {
-		this.studentInt = studentInt;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
 	public String getStudentName() {
@@ -44,9 +44,9 @@ public class Student {
 		this.studentCity = studentCity;
 	}
 
-	public Student(int studentInt, String studentName, String studentCity) {
+	public Student(int studentId, String studentName, String studentCity) {
 		super();
-		this.studentInt = studentInt;
+		this.studentId = studentId;
 		this.studentName = studentName;
 		this.studentCity = studentCity;
 	}
